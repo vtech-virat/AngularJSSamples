@@ -15,10 +15,3 @@ hotelcontentApp.config(function($routeProvider) {
       });
         });
 
-
-
-hotelcontentApp.controller("hoteldetailscontroller", function($scope)
-{
-  $scope.Id=100;
-});
-
