@@ -20,6 +20,12 @@ hotelcontentApp.controller("hotelListcontroller", function($scope,$http)
 	$http.get('json/HotelList.json').success(function(data)
 		{
 			$scope.hotellist=data.records;
+      $scope.paginginfo=
+      {
+        totalrecords: data.records.length,
+        countfrom:1,
+        countto:4
+      };
 		});
 });
 
