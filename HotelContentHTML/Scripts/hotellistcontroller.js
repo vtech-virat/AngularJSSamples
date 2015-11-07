@@ -9,7 +9,9 @@ hotelcontentApp.controller("hotelListcontroller", function($scope,$http)
       {
         totalrecords: data.records.length,
         countfrom:1,
-        countto:4
+        countto:4,
+        currentpageindex:1,
+        totalpages:1
       };
 		});
 });
