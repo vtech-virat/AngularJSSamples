@@ -1,0 +1,28 @@
+{
+"records": [
+  {
+    "Id":1,
+    "Name" : "Mariott",
+    "City" : "Berlin",
+    "Country" : "Germany"
+  },
+  {
+    "Id":2,
+    "Name" : "Best western",
+    "City" : "Luleå",
+    "Country" : "Sweden"
+  },
+  {
+    "Id":3,
+    "Name" : "Royal Orchid",
+    "City" : "México D.F.",
+    "Country" : "Mexico"
+  },
+  {
+    "Id":4,
+    "Name" : "Hyatt",
+    "City" : "Graz",
+    "Country" : "Austria"
+  }
+  ]
+}

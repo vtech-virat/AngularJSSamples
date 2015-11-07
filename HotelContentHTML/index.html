@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="hotelcontentApp">
+  <head>
+    <title>vervotech</title>
+    <link rel="stylesheet" href="Theme/Default/site.min.css" />
+  </head>
+  <body>
+  	<nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-panel">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <small>vervotech</small>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-panel">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="#hotellist">Hotels</a></li>
+                    <li><a href="#newhotel">Add New Hotel</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Welcome John <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/manage/settings"><i class="fa fa-cog"></i> Settings</a></li>
+                            <li><a href="/manage/profile"><i class="fa fa-user"></i> Profile</a></li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-power-off "></i>Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="main-container container">
+        <div class="main-content">
+            <div class="main-content-inner">
+
+			<div ng-view></div>
+
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer">
+                <div class="footer-inner">
+                    <div class="footer-content">
+                        <span class="bigger-120">
+                            <span class="blue bolder">vervotech</span>
+                            &copy; 2015 - 
+                        </span>
+
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="Scripts/angular.js"></script>
+  <script src="Scripts/angular-route.js"></script>
+  <script src="Scripts/app.js"></script>
+      </body>
+</html>
