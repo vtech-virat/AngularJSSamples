@@ -1,4 +1,4 @@
-hotelcontentApp.controller("hoteldetailscontroller",function($scope,$http)
+hotelcontentApp.controller("hoteldetailscontroller2",function($scope,$http)
 {
 	$scope.HotelModel={};
 	$scope.nextStep=function()

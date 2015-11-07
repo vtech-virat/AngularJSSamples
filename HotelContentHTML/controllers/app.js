@@ -6,11 +6,17 @@ hotelcontentApp.config(function($routeProvider) {
         templateUrl: "views/HotelList.html",
         controller: "hotelListcontroller"
       }).
-      when("/newhotel",
+      when("/newhotelstep1",
       {
           templateUrl:"views/HotelDetailsPage1.html",
           controller:"hoteldetailscontroller"
-      }).otherwise({
+      }).
+      when("/newhotelstep2",
+      {
+          templateUrl:"views/step2.html",
+          controller:"hoteldetailscontrollerstep2"
+      })
+      .otherwise({
         redirectTo: "/hotellist"
       });
         });

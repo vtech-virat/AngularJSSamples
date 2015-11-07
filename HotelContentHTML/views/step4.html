@@ -1,0 +1,228 @@
+﻿
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title green">Rate Card</h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="form-horizontal">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Code</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control input-sm" placeholder="Code">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Name</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control input-sm" placeholder="Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Base Rate</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control input-sm" placeholder="Base Rate">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Discount</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control input-sm" placeholder="Discount">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Per Room Per Person Cost</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control input-sm" placeholder="Amount">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Tax</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control input-sm" placeholder="Tax">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label"> Board Basis</label>
+                        <div class="col-md-9">
+                            <div class="col-sm-6 no-padding">
+                                <select class="form-control input-sm col-sm-6">
+                                    <option>Select Board Basis</option>
+                                </select>
+                            </div>
+                            <button ng-click="openBoardBasisPopup()" class="btn btn-link">Add New Board Basis</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label"> Allotment</label>
+                        <div class="col-md-6">
+                            <select class="form-control input-sm">
+                                <option>Fixed</option>
+                                <option>Free Sale</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Allocation</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control input-sm" placeholder="Value">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">Extra</h3>
+    </div>
+    <div class="panel-body">
+        <form class="form-inline">
+            <div class="row">
+                <div class="row form-inline padding-10">
+                    <div class="col-sm-offset-1 col-sm-3">
+                        <div class="form-group">
+                            <select class="form-control input-sm">
+                                <option>Select Passenger TYpe</option>
+                                <option>Extra Adult</option>
+                                <option>Extra Child with Bed</option>
+                                <option>Extra Child without Bed</option>
+                                <option>Infant</option>
+                                <option>Cot</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" placeholder="Value">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <select class="form-control input-sm">
+                                <option>Select Age Range</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="btn btn-link">Add</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div><!--Extra panel end-->
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title ">Additional Fee</h3>
+
+    </div>
+    <div class="panel-body">
+        <div class="form-horizontal row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Name</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control input-sm" placeholder="Name">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Type</label>
+                    <div class="col-md-8">
+                        <select class="form-control input-sm">
+                            <option>Tax</option>
+                            <option>Fee</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="col-md-3 control-label"> Amount</label>
+                    <div class="col-md-8 row">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control input-sm" placeholder="Amount">
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="form-control input-sm">
+                                <option>Percent</option>
+                                <option>Fixed</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">Nationality</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Include</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control input-sm" placeholder="Country">
+                    </div>
+                    <div class="col-xs-2">
+                        <a class="btn btn-link">
+                            <i class="fa fa-plus fa-1x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Exclude</label>
+                    <div class="col-md-6">
+                        <div class="col-xs-10">
+                            <input type="text" class="form-control input-sm col-xs-10" placeholder="Country">
+                        </div>
+                        <div class="col-xs-2">
+                            <a class="btn btn-link">
+                                <i class="fa fa-plus fa-1x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--panel end Nationality -->
+
+

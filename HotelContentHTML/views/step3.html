@@ -1,0 +1,438 @@
+﻿<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title green">Rooms</h3>
+    </div>
+    <div class="panel-body">
+        <button class="btn btn-link" ng-click="addRoom()">Add Room</button>
+    </div>
+</div>
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title green">Policy Group</h3>
+    </div>
+    <div class="panel-body">
+        <button class="btn btn-link" ng-click="addPolicyGroup()">Add Policy Group</button>
+    </div>
+</div>
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title green">Board Basis</h3>
+    </div>
+    <div class="panel-body">
+        <button class="btn btn-link" ng-click="openBoardBasisPopup()">Add Board Basis</button>
+    </div>
+</div>
+
+<script id="template-room" type="text/ng-template">
+    <div class="modal-header">
+        <h3 class="modal-title green">Room</h3>
+    </div>
+    <div class="modal-body">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title green">General Room Info</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Code</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control input-sm" placeholder="Code">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Sell Type</label>
+                                <div class="col-md-6">
+                                    <select class="form-control input-sm">
+                                        <option>Select Sell Type</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Name</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control input-sm" placeholder="Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Number of Beds</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control input-sm" placeholder="Number of Beds">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Bed Type</label>
+                                <div class="col-md-6">
+                                    <select class="form-control input-sm">
+                                        <option>Select Bed Type</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Description</label>
+                                <div class="col-md-9">
+                                    <textarea class="form-control input-sm"></textarea>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title green">Capacity</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Maximum Adult</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control input-sm" placeholder="Maximum Adult">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Maximum Bed without Bed</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control input-sm" placeholder="Maximum Bed without Bed">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Recommended Max Adult</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control input-sm" placeholder="Recommended Max Adult">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Maximum Bed with Bed</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control input-sm" placeholder="Maximum Bed with Bed">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--panel body end-->
+        </div><!--Capacity panel end-->
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title green ">Room Policies</h3>
+            </div>
+            <div class="panel-body">
+                <form class=" form-inline padding-10">
+                    <div class="col-sm-offset-1 col-sm-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" placeholder="Policy Text">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <select class="form-control input-sm col-xs-12">
+                                <option>Select</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="btn btn-link">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div><!--Room Policiess Panel end-->
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title green">Room Level Tax</h3>
+                <!--<button class="btn btn-link pull-right padding-0">Add Tax</button>
+                <span class="clearfix"></span>-->
+            </div>
+            <div class="panel-body">
+                <div class="row form-inline padding-10">
+                    <div class="col-sm-offset-1 col-sm-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" placeholder="Type">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" placeholder="Description">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" placeholder="Value">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="btn btn-link">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div><!--Room Tax Panel end-->
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+
+
+<script id="template-policy-group" type="text/ng-template">
+    <div class="modal-header">
+        <h3 class="modal-title green">Policy Group</h3>
+    </div>
+    <div class="modal-body">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Policy Group</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Name</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control input-sm" placeholder="Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Advance Purchase</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control input-sm" placeholder="Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Maximum Stay Duration</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control input-sm" placeholder="Max Stay Duration">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Minimum Stay Duration</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control input-sm" placeholder="Minimum Stay Duration">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Cancellation Policies</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row form-inline padding-10">
+                    <div class="col-sm-offset-1 col-sm-3">
+                        <div class="form-group">
+                            <select class="form-control input-sm">
+                                <option>Select Policy Type</option>
+                                <option>Before Checkin</option>
+                                <option>After Purchase</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" placeholder="Value">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" placeholder="Amount">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="btn btn-link">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div><!--Cancellation Policy Pannel-->
+
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Promotion &amp; Discount</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row form-inline padding-10">
+                    <div class="col-sm-offset-1 col-sm-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" placeholder="Code">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" placeholder="Value">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" placeholder="Amount">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="btn btn-link">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div><!--Promotion Discount Pannel-->
+
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Backout</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-xs-12 control-label">Check-In Day</label>
+                        <div class="col-xs-12">
+                            <div class="col-xs-9 no-padding">
+                                <input type="text" class="form-control input-sm " placeholder="MM/DD/YYYY">
+                            </div>
+                            <div class="col-xs-3">
+                                <a class="btn btn-link">
+                                    <i class="fa fa-plus fa-2x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-xs-12 control-label">Check-Out Day</label>
+                        <div class="col-xs-12">
+                            <div class="col-xs-9 no-padding">
+                                <input type="text" class="form-control input-sm " placeholder="MM/DD/YYYY">
+                            </div>
+                            <div class="col-xs-3">
+                                <a class="btn btn-link">
+                                    <i class="fa fa-plus fa-2x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--Backout Panel-->
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+
+
+<script id="template-boardbasis" type="text/ng-template">
+    <div class="modal-header">
+        <h3 class="modal-title green">Board Basis</h3>
+    </div>
+    <div class="modal-body">
+        <div class="form-horizontal row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Code</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control input-sm" placeholder="Code">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Name</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control input-sm" placeholder="Name">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Cost Unit</label>
+                    <div class="col-md-6">
+                        <select class="form-control input-sm">
+                            <option>Per night</option>
+                            <option>Per booking</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Cost Type</label>
+                    <div class="col-md-6">
+                        <select class="form-control input-sm">
+                            <option>Per person</option>
+                            <option>Per room</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Rate</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control input-sm" placeholder="Rate">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Rate for extra board basis</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control input-sm" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">From Date</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control input-sm" placeholder="MM/DD/YYYY">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">To Date</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control input-sm" placeholder="MM/DD/YYYY">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
