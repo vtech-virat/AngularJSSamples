@@ -3,7 +3,7 @@ hotelcontentApp.controller("hoteldetailscontroller",function($scope,$http)
 	$scope.HotelModel={};
 	$scope.nextStep=function()
 	{
-	console.log(JSON.stringify($scope.HotelModel))
+	console.log(JSON.stringify($scope.HotelModel));
 		
 // 		$http.post('/hotelcontentservice/submitData', { hotelcontent: JSON.stringify($scope.HotelModel) })
 //                  .success(onSuccess)

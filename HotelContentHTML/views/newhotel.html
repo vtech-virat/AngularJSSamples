@@ -56,7 +56,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Name</label>
                                                 <div class="col-md-6">
-                                                    <input type="text" class="form-control input-sm" placeholder="Name">
+                                                    <input type="text" class="form-control input-sm" placeholder="Name" ng-model="HotelModel.name" />
                                                 </div>
                                             </div>
                                         </div>
@@ -64,7 +64,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Rating</label>
                                                 <div class="col-md-6">
-                                                    <select class="form-control input-sm">
+                                                    <select class="form-control input-sm" ng-model="HotelModel.rating">
                                                         <option>1</option>
                                                         <option>2</option>
                                                         <option>3</option>
@@ -81,7 +81,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Category</label>
                                                 <div class="col-md-6">
-                                                    <select class="form-control input-sm">
+                                                    <select class="form-control input-sm" ng-model="HotelModel.category">
                                                         <option>Select</option>
 
                                                     </select>
@@ -92,7 +92,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">User Rating</label>
                                                 <div class="col-md-6">
-                                                    <select class="form-control input-sm">
+                                                    <select class="form-control input-sm" ng-model="HotelModel.userrating">
                                                         <option>1</option>
                                                         <option>2</option>
                                                         <option>3</option>
@@ -106,9 +106,9 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Hotel Chain</label>
                                                 <div class="col-md-6">
-                                                    <select class="form-control input-sm">
+                                                    <select class="form-control input-sm" ng-model="HotelModel.hotelchain">
                                                         <option>Select</option>
-
+                                                         <option>Mariott</option>       
                                                     </select>
                                                 </div>
                                             </div>
@@ -117,7 +117,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Website</label>
                                                 <div class="col-md-6">
-                                                    <input type="text" class="form-control input-sm" placeholder="Website">
+                                                    <input type="text" class="form-control input-sm" placeholder="Website" ng-model="HotelModel.website" />
                                                 </div>
                                             </div>
                                         </div>
@@ -128,7 +128,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Description</label>
                                                 <div class="col-md-10">
-                                                    <textarea rows="5" class="col-sm-12" ></textarea>                                                   
+                                                    <textarea rows="5" class="col-sm-12" ng-model="HotelModel.description" ></textarea>                                                   
                                                 </div>
                                             </div>
                                         </div>
@@ -151,19 +151,19 @@
                                     <div class="form-group col-sm-3">
                                         <label class="col-md-4 control-label">Phone</label>
                                         <div class="col-md-6">
-                                            <input type="text" class="form-control input-sm" placeholder="Phone" />
+                                            <input type="text" class="form-control input-sm" placeholder="Phone" ng-model="HotelModel.ci.phonenumber"  />
                                         </div>
                                     </div>
                                     <div class="form-group col-sm-3">
                                         <label class="col-md-4 control-label">Fax</label>
                                         <div class="col-md-6">
-                                            <input type="text" class="form-control input-sm" placeholder="Fax" />
+                                            <input type="text" class="form-control input-sm" placeholder="Fax" ng-model="HotelModel.ci.fax" />
                                         </div>
                                     </div>
                                     <div class="form-group col-sm-5">
                                         <label class="col-md-4 control-label">Email</label>
                                         <div class="col-md-6">
-                                            <input type="text" class="form-control input-sm" placeholder="Email" />
+                                            <input type="text" class="form-control input-sm" placeholder="Email" ng-model="HotelModel.ci.email" />
                                         </div>
                                     </div>
 
@@ -185,7 +185,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Address1</label>
                                                 <div class="col-md-6">
-                                                    <input type="text" class="form-control input-sm" placeholder="Address1" />
+                                                    <input type="text" class="form-control input-sm" placeholder="Address1" ng-model="HotelModel.locality.address1" />
                                                 </div>
                                             </div>
                                         </div>
@@ -193,7 +193,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Address2</label>
                                                 <div class="col-md-6">
-                                                    <input type="text" class="form-control input-sm" placeholder="Address2">
+                                                    <input type="text" class="form-control input-sm" placeholder="Address2" ng-model="HotelModel.locality.address2" />
                                                 </div>
                                             </div>
                                         </div>
@@ -202,7 +202,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Country</label>
                                                 <div class="col-md-6">
-                                                    <select class="form-control input-sm">
+                                                    <select class="form-control input-sm" ng-model="HotelModel.locality.country" >
                                                         <option>Select</option>
 
                                                     </select>
@@ -213,7 +213,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">State</label>
                                                 <div class="col-md-6">
-                                                    <input type="text" class="form-control input-sm" placeholder="State">
+                                                    <input type="text" class="form-control input-sm" placeholder="State" ng-model="HotelModel.locality.state" />
                                                 </div>
                                             </div>
                                         </div>
@@ -222,7 +222,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">City</label>
                                                 <div class="col-md-6">
-                                                    <input type="text" class="form-control input-sm" placeholder="City" />
+                                                    <input type="text" class="form-control input-sm" placeholder="City" ng-model="HotelModel.locality.city" />
                                                 </div>
                                             </div>
                                         </div>
@@ -230,7 +230,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Zip Code</label>
                                                 <div class="col-md-6">
-                                                    <input type="text" class="form-control input-sm" placeholder="Zip Code">
+                                                    <input type="text" class="form-control input-sm" placeholder="Zip Code" ng-model="HotelModel.locality.zipcode" />
                                                 </div>
                                             </div>
                                         </div>
@@ -264,7 +264,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Name</label>
                                                 <div class="col-md-6">
-                                                    <input type="text" class="form-control input-sm" placeholder="Name">
+                                                    <input type="text" class="form-control input-sm" placeholder="Name" ng-model="HotelModel.cp.name" />
                                                 </div>
                                             </div>
                                         </div>
@@ -272,7 +272,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Email</label>
                                                 <div class="col-md-6">
-                                                    <input type="text" class="form-control input-sm" placeholder="Email">
+                                                    <input type="text" class="form-control input-sm" placeholder="Email" ng-model="HotelModel.cp.ci.email" />
                                                 </div>
                                             </div>
                                         </div>
@@ -280,7 +280,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Phone</label>
                                                 <div class="col-md-6">
-                                                    <input type="text" class="form-control input-sm" placeholder="Phone">
+                                                    <input type="text" class="form-control input-sm" placeholder="Phone" ng-model="HotelModel.cp.ci.phone" />
                                                 </div>
                                             </div>
                                         </div>
@@ -288,7 +288,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Fax</label>
                                                 <div class="col-md-6">
-                                                    <input type="text" class="form-control input-sm" placeholder="Fax">
+                                                    <input type="text" class="form-control input-sm" placeholder="Fax" ng-model="HotelModel.cp.ci.address" />
                                                 </div>
                                             </div>
                                         </div>

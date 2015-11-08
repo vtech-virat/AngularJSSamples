@@ -6,8 +6,9 @@ function HotelModel() {
     this.chain = "";
     this.website = "";
     this.descriptions = [];
-    this.CI=new Contactinformation();
+    this.ci=new Contactinformation();
     this.locality = new HotelLocality();
+    this.cp=new ContactPerson();
 }
 
 function ContactInformation()
@@ -32,7 +33,7 @@ function HotelLocality() {
 
 function ContactPerson()
 {
-    this.Name="";
-    this.CI=new ContactInformation();
+    this.name="";
+    this.ci=new ContactInformation();
 }
 
