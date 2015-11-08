@@ -202,10 +202,9 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Country</label>
                                                 <div class="col-md-6">
-                                                    <select class="form-control input-sm" ng-model="HotelModel.locality.country" >
-                                                        <option>Select</option>
-
-                                                    </select>
+                                                     <select class="form-control input-sm"  ng-model="HotelModel.locality.country" ng-options="country.name  for country in countries">
+                                                         <option value="">Select</option>
+                                                        </select>
                                                 </div>
                                             </div>
                                         </div>

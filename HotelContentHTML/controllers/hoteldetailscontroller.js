@@ -1,5 +1,12 @@
 hotelcontentApp.controller("hoteldetailscontroller",function($scope,$http)
 {
+	$scope.countries={};
+	 /*Read records from json service */
+	$http.get('json/countries.json').success(function(data)
+		{
+		$scope.countries=data.countries;
+		});
+	
 	$scope.HotelModel={};
 	$scope.nextStep=function()
 	{
