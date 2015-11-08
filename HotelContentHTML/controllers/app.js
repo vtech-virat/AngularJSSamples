@@ -3,12 +3,12 @@ var hotelcontentApp = angular.module("hotelcontentApp", ["ngRoute"]);
 hotelcontentApp.config(function($routeProvider) {
     $routeProvider.
       when("/hotellist", {
-        templateUrl: "views/HotelList.html",
+        templateUrl: "views/hotellist.html",
         controller: "hotelListcontroller"
       }).
       when("/newhotelstep1",
       {
-          templateUrl:"views/HotelDetailsPage1.html",
+          templateUrl:"views/newhotel.html",
           controller:"hoteldetailscontroller"
       }).
       when("/newhotelstep2",

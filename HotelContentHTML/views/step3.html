@@ -79,6 +79,14 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Maximum Capacity</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control input-sm" placeholder="Maximum Capacity">
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-xs-12">
                             <div class="form-group">
                                 <label class="col-md-2 control-label">Description</label>
@@ -93,76 +101,42 @@
             </div>
         </div>
 
-        <div class="panel panel-info">
-            <div class="panel-heading">
-                <h3 class="panel-title green">Capacity</h3>
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label class="col-md-4 control-label">Maximum Adult</label>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control input-sm" placeholder="Maximum Adult">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label class="col-md-4 control-label">Maximum Bed without Bed</label>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control input-sm" placeholder="Maximum Bed without Bed">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label class="col-md-4 control-label">Recommended Max Adult</label>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control input-sm" placeholder="Recommended Max Adult">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label class="col-md-4 control-label">Maximum Bed with Bed</label>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control input-sm" placeholder="Maximum Bed with Bed">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--panel body end-->
-        </div><!--Capacity panel end-->
 
         <div class="panel panel-info">
             <div class="panel-heading">
                 <h3 class="panel-title green ">Room Policies</h3>
             </div>
             <div class="panel-body">
-                <form class=" form-inline padding-10">
-                    <div class="col-sm-offset-1 col-sm-4">
+                 <div class="form-inline">
+    
+                    <div class="col-sm-3 no-padding"> 
                         <div class="form-group">
-                            <input type="text" class="form-control input-sm" placeholder="Policy Text">
+                            <label class="col-md-4 control-label">Title</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control input-sm" placeholder="Title">
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-6 no-padding">
                         <div class="form-group">
-                            <select class="form-control input-sm col-xs-12">
-                                <option>Select</option>
-                            </select>
+                            <label class="col-md-4 control-label">Description</label>
+                            <div class="col-md-6">
+                                <textarea cols="25" rows="4" class="form-control input-sm"></textarea>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-2">
-                        <button class="btn btn-link">Add</button>
+                    
+                    <div class="col-sm-2 no-padding">
+    
+                        <a class="btn btn-link">Add</a>
                     </div>
-                </form>
+                </div>
             </div>
         </div><!--Room Policiess Panel end-->
 
         <div class="panel panel-info">
             <div class="panel-heading">
-                <h3 class="panel-title green">Room Level Tax</h3>
+                <h3 class="panel-title green">Taxes and fees</h3>
                 <!--<button class="btn btn-link pull-right padding-0">Add Tax</button>
                 <span class="clearfix"></span>-->
             </div>
@@ -170,17 +144,21 @@
                 <div class="row form-inline padding-10">
                     <div class="col-sm-offset-1 col-sm-3">
                         <div class="form-group">
-                            <input type="text" class="form-control input-sm" placeholder="Type">
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="form-group">
                             <input type="text" class="form-control input-sm" placeholder="Description">
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="form-group">
                             <input type="text" class="form-control input-sm" placeholder="Value">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <select>
+                                <option>Select Type</options>
+                                <option>Absulute</option>
+                                <option>Percentage</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-sm-2">
@@ -251,6 +229,14 @@
                 <h3 class="panel-title">Cancellation Policies</h3>
             </div>
             <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <label>
+                            <input type="checkbox" />
+                            Non refundable
+                        </label>
+                    </div>
+                </div>
                 <div class="row form-inline padding-10">
                     <div class="col-sm-offset-1 col-sm-3">
                         <div class="form-group">
@@ -277,37 +263,104 @@
                 </div>
             </div>
         </div><!--Cancellation Policy Pannel-->
-
-
+        
         <div class="panel panel-info">
             <div class="panel-heading">
-                <h3 class="panel-title">Promotion &amp; Discount</h3>
+                <h3 class="panel-title">Booking Period</h3>
             </div>
             <div class="panel-body">
-                <div class="row form-inline padding-10">
-                    <div class="col-sm-offset-1 col-sm-3">
-                        <div class="form-group">
-                            <input type="text" class="form-control input-sm" placeholder="Code">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-xs-12 control-label">From Date</label>
+                        <div class="col-xs-12">
+                            <div class="col-xs-9 no-padding">
+                                <input type="text" class="form-control input-sm " placeholder="MM/DD/YYYY">
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
-                        <div class="form-group">
-                            <input type="text" class="form-control input-sm" placeholder="Value">
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-xs-12 control-label">To date</label>
+                        <div class="col-xs-12">
+                            <div class="col-xs-9 no-padding">
+                                <input type="text" class="form-control input-sm " placeholder="MM/DD/YYYY">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="form-group">
-                            <input type="text" class="form-control input-sm" placeholder="Amount">
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <button class="btn btn-link">Add</button>
                     </div>
                 </div>
             </div>
-        </div><!--Promotion Discount Pannel-->
+        </div><!--Booking period-->
+        
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Nationality</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Include</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control input-sm" placeholder="Country">
+                            </div>
+                            <div class="col-xs-2">
+                                <a class="btn btn-link">
+                                    <i class="fa fa-plus fa-1x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Exclude</label>
+                            <div class="col-md-6">
+                                <div class="col-xs-10">
+                                    <input type="text" class="form-control input-sm col-xs-10" placeholder="Country">
+                                </div>
+                                <div class="col-xs-2">
+                                    <a class="btn btn-link">
+                                        <i class="fa fa-plus fa-1x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--panel end Nationality -->
 
-
+        
+         <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title green ">Policies</h3>
+            </div>
+            <div class="panel-body">
+                 <div class="form-inline">
+    
+                    <div class="col-sm-3 no-padding"> 
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Title</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control input-sm" placeholder="Title">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 no-padding">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Description</label>
+                            <div class="col-md-6">
+                                <textarea cols="25" rows="4" class="form-control input-sm"></textarea>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="col-sm-2 no-padding">
+                        <a class="btn btn-link">Add</a>
+                    </div>
+                </div>
+            </div>
+        </div><!--Policiess Panel end-->
+        
         <div class="panel panel-info">
             <div class="panel-heading">
                 <h3 class="panel-title">Backout</h3>
@@ -377,7 +430,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label class="col-md-4 control-label"> Cost Unit</label>
+                    <label class="col-md-4 control-label"> Rate Basis</label>
                     <div class="col-md-6">
                         <select class="form-control input-sm">
                             <option>Per night</option>
@@ -397,14 +450,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Rate</label>
-                    <div class="col-md-6">
-                        <input type="text" class="form-control input-sm" placeholder="Rate">
-                    </div>
-                </div>
-            </div>
+                
             <div class="col-sm-6">
                 <div class="form-group">
                     <label class="col-md-4 control-label">Rate for extra board basis</label>
@@ -430,6 +476,82 @@
                 </div>
             </div>
         </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Rate</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>
+                        <input type="checkbox" >
+                        Apply for perticular time period
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <label>
+                        <input type="checkbox" >
+                        Apply seperate rate for extra person
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        Adult
+                        <input type="text" class="form-control input-sm" />
+                    </div>
+                    <div class="col-sm-2">
+                        Child with bed
+                        <input type="text" class="form-control input-sm" />
+                    </div>
+                    <div class="col-sm-2">
+                        Child without bed
+                        <input type="text" class="form-control input-sm" />
+                    </div>
+                    <div class="col-sm-2">
+                        Infant
+                        <input type="text" class="form-control input-sm" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        Date Period
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control input-sm" placeholder="from date" />
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control input-sm" placeholder="to date" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        Extra Person
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        Adult
+                        <input type="text" class="form-control input-sm" />
+                    </div>
+                    <div class="col-sm-2">
+                         Child with bed
+                        <input type="text" class="form-control input-sm" />
+                    </div>
+                    <div class="col-sm-2">
+                         Child without bed
+                        <input type="text" class="form-control input-sm" />
+                    </div>
+                    <div class="col-sm-2">
+                        Infant
+                        <input type="text" class="form-control input-sm" />
+                    </div>
+                </div>
+            </div>
+        </div><!--Rate panel END -->
+        
     </div>
     <div class="modal-footer">
         <button class="btn btn-primary" ng-click="ok()">OK</button>

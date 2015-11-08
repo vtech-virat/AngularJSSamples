@@ -1,16 +1,22 @@
+﻿
 <div class="page-header row">
     <div class="col-xs-6">
         <h1>
             Hotels
             <small>
                 <i class="ace-icon fa fa-angle-double-right"></i>
+                {{title}}
             </small>
         </h1>
+    </div>
+    <div class="col-xs-6 ">
+        <a id="btnNewHotel" href="#newhotelstep1" class="btn btn-success  pull-right">New Hotel</a>
     </div>
 </div>
 
 <div class="row">
     <div class="col-xs-12">
+
         <div class="table-header">
             Hotel Listing
         </div>
@@ -46,11 +52,13 @@
                             </th>
                             <th colspan="1" rowspan="1" tabindex="0" class="sorting">Id</th>
                             <th colspan="1" rowspan="1" tabindex="0" class="sorting">Hotel Name</th>
-                            <th colspan="1" rowspan="1" tabindex="0" class="hidden-480">City</th>
+                            <th colspan="1" rowspan="1" tabindex="0" class="hidden-480">Address</th>
                             <th colspan="1" rowspan="1" tabindex="0" class="sorting">
                                 <i class="vt-icon fa fa-clock-o bigger-110 hidden-480"></i>
-                                Address
+                                Update
                             </th>
+                            <th colspan="1" rowspan="1" tabindex="0" class="hidden-480 sorting">Status</th>
+                            <th aria-label="" colspan="1" rowspan="1" class="sorting_disabled"></th>
                         </tr>
                     </thead>
 
@@ -60,7 +68,7 @@
                                 <i class="fa fa-spinner fa-pulse fa-5x"></i>
                             </td>
                         </tr>
-                        <tr class="odd" role="row" ng-repeat="hotel in hotellist | filter:query | orderBy:orderProp">
+                        <tr class="odd" role="row" data-ng-repeat="h in hotels|filter:query">
                             <td class="center">
                                 <label class="pos-rel">
                                     <input class="vt" type="checkbox">
@@ -68,9 +76,14 @@
                                 </label>
                             </td>
 
-                            <td ng-bind="hotel.Id"></td>
-                            <td ng-bind="hotel.Name"></td>
-                            <td class="hidden-480" ng-bind="hotel.City"></td>
+                            <td ng-bind="h.Id"></td>
+                            <td ng-bind="h.Name"></td>
+                            <td class="hidden-480" ng-bind="h.Address.Country"></td>
+                            <td ng-bind="h.LastUpdate">Feb 12</td>
+                            <td class="hidden-480">
+                                <span class="label label-sm label-warning" ng-bind="h.status">Enable</span>
+                            </td>
+
                             <td>
                                 <div class="action-buttons">
                                     <a class="green" href="#">
@@ -87,7 +100,7 @@
                 </table>
                 <div class="row" ng-hide="loading">
                     <div class="col-xs-6">
-                        <div class="dataTables_info">Showing {{paginginfo.countfrom}} to {{paginginfo.countto}} of {{paginginfo.totalrecords}} entries</div>
+                        <div class="dataTables_info">Showing {{paginginfo.countFrom}} to {{paginginfo.countTo}} of {{paginginfo.totalRecord}} entries</div>
                     </div>
                     <div class="col-xs-6">
                         <div class="dataTables_paginate paging_simple_numbers">
@@ -96,7 +109,7 @@
                                     <a href="#">Previous</a>
                                 </li>
                                 <li tabindex="0" class="">
-                                    <span> {{paginginfo.currentpageindex}} of {{paginginfo.totalpages}}</span>
+                                    <span> {{paginginfo.currentPage}} of {{paginginfo.totalPages}}</span>
                                 </li>
                                 <li id="dynamic-table_next" tabindex="0" class="paginate_button next">
                                     <a href="#">Next</a>

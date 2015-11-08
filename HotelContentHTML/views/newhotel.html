@@ -1,9 +1,11 @@
+﻿
 <div class="page-header row">
 
     <h1>
         Hotels
         <small>
             <i class="ace-icon fa fa-angle-double-right"></i>
+            {{title}}
         </small>
     </h1>
 
@@ -54,9 +56,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Name</label>
                                                 <div class="col-md-6">
-                                                    <input type="text" 
-                                                    class="form-control input-sm" placeholder="Name" 
-                                                    ng-model="HotelModel.name">
+                                                    <input type="text" class="form-control input-sm" placeholder="Name">
                                                 </div>
                                             </div>
                                         </div>
@@ -64,7 +64,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Rating</label>
                                                 <div class="col-md-6">
-                                                    <select class="form-control input-sm" ng-model="HotelModel.rating">
+                                                    <select class="form-control input-sm">
                                                         <option>1</option>
                                                         <option>2</option>
                                                         <option>3</option>
@@ -81,9 +81,9 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Category</label>
                                                 <div class="col-md-6">
-                                                    <select class="form-control input-sm" ng-model="HotelModel.category">
+                                                    <select class="form-control input-sm">
                                                         <option>Select</option>
-                                                            <option>Restaurant</option>
+
                                                     </select>
                                                 </div>
                                             </div>
@@ -92,7 +92,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">User Rating</label>
                                                 <div class="col-md-6">
-                                                    <select class="form-control input-sm" ng-model="HotelModel.userRating">
+                                                    <select class="form-control input-sm">
                                                         <option>1</option>
                                                         <option>2</option>
                                                         <option>3</option>
@@ -106,7 +106,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Hotel Chain</label>
                                                 <div class="col-md-6">
-                                                    <select class="form-control input-sm" ng-model="HotelModel.hotelchain">
+                                                    <select class="form-control input-sm">
                                                         <option>Select</option>
 
                                                     </select>
@@ -117,18 +117,18 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Website</label>
                                                 <div class="col-md-6">
-                                                    <input type="text" class="form-control input-sm" placeholder="Website" ng-model="HotelModel.website">
+                                                    <input type="text" class="form-control input-sm" placeholder="Website">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label class="col-md-4 control-label">Description</label>
-                                                <div class="col-md-6">
-                                                    <a href="" class="form-control input-sm btn btn-link">Add Description</a>
+                                                <label class="col-md-2 control-label">Description</label>
+                                                <div class="col-md-10">
+                                                    <textarea rows="5" class="col-sm-12" ></textarea>                                                   
                                                 </div>
                                             </div>
                                         </div>
@@ -151,19 +151,19 @@
                                     <div class="form-group col-sm-3">
                                         <label class="col-md-4 control-label">Phone</label>
                                         <div class="col-md-6">
-                                            <input type="text" class="form-control input-sm" placeholder="Phone" ng-model="HotelModel.ContactInformation.phonenumber" />
+                                            <input type="text" class="form-control input-sm" placeholder="Phone" />
                                         </div>
                                     </div>
                                     <div class="form-group col-sm-3">
                                         <label class="col-md-4 control-label">Fax</label>
                                         <div class="col-md-6">
-                                            <input type="text" class="form-control input-sm" placeholder="Fax"  ng-model="HotelModel.ContactInformation.fax"/>
+                                            <input type="text" class="form-control input-sm" placeholder="Fax" />
                                         </div>
                                     </div>
                                     <div class="form-group col-sm-5">
                                         <label class="col-md-4 control-label">Email</label>
                                         <div class="col-md-6">
-                                            <input type="text" class="form-control input-sm" placeholder="Email" ng-model="HotelModel.ContactInformation.email" />
+                                            <input type="text" class="form-control input-sm" placeholder="Email" />
                                         </div>
                                     </div>
 
@@ -240,6 +240,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-4 control-label">Geo Code</label>
                                                 <div class="col-md-6">
+                                                    <input type="text" class="form-control input-sm" placeholder="Latitude, Longitude">
                                                     <a class="btn btn-link form-control input-sm" ng-click="openMapView()">Show on Map</a>
                                                 </div>
                                             </div>
@@ -334,7 +335,7 @@
                             Prev
                         </button>
 
-                       <a ng-click="nextStep()" href="#newhotelstep2" class="btn btn-success btn-next" data-last="Finish">
+                        <a ng-click="nextStep()" class="btn btn-success btn-next" data-last="Finish">
                             Next
                             <i class="ace-icon fa fa-arrow-right icon-on-right"></i>
                         </a>
@@ -374,6 +375,19 @@
         </div>
 
 
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+
+
+<script id="template-mapview" type="text/ng-template">
+    <div class="modal-header">
+        <h3 class="modal-title green">Map View</h3>
+    </div>
+    <div class="modal-body">
     </div>
     <div class="modal-footer">
         <button class="btn btn-primary" ng-click="ok()">OK</button>

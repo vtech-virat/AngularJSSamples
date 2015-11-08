@@ -3,26 +3,52 @@
   {
     "Id":1,
     "Name" : "Mariott",
-    "City" : "Berlin",
-    "Country" : "Germany"
+    "Address":
+    {
+     "City" : "Berlin",
+     "State":"BerlinState",
+      "Country" : "Germany" 
+    },
+    "LastUpdatedOn":"12/12/2014"
   },
   {
     "Id":2,
     "Name" : "Best western",
     "City" : "Luleå",
-    "Country" : "Sweden"
+    "Country" : "Sweden",
+    "Address":
+    {
+     "City" : "Berlin",
+     "State":"BerlinState",
+      "Country" : "Germany" 
+    },
+    "LastUpdatedOn":"12/12/2014"
   },
   {
     "Id":3,
     "Name" : "Royal Orchid",
     "City" : "México D.F.",
-    "Country" : "Mexico"
+    "Country" : "Mexico",
+    "Address":
+    {
+     "City" : "Berlin",
+     "State":"BerlinState",
+      "Country" : "Germany" 
+    },
+    "LastUpdatedOn":"12/12/2014"
   },
   {
     "Id":4,
     "Name" : "Hyatt",
     "City" : "Graz",
-    "Country" : "Austria"
+    "Country" : "Austria",
+    "Address":
+    {
+     "City" : "Berlin",
+     "State":"BerlinState",
+      "Country" : "Germany" 
+    },
+    "LastUpdatedOn":"12/12/2014"
   }
   ]
 }

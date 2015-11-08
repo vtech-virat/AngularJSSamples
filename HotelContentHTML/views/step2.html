@@ -56,28 +56,6 @@
 
         </div>
 
-        <div class="col-sm-3">
-
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <label class="panel-title width-100 ">
-                        Week Days
-                        <input ng-model="weekendDef" class="pull-right" type="checkbox">
-                    </label>
-
-                </div>
-                <div ng-show="weekendDef" class="panel-body">
-                    <div class="checkbox" ng-repeat="d in days">
-                        <label>
-                            <input class="vt" type="checkbox"> &nbsp;
-                            <span class="lbl" ng-bind="d"></span>
-                        </label>
-                    </div>
-                </div>
-            </div><!--end panel-->
-
-
-        </div>
 
         <div class="col-sm-3">
 
@@ -106,24 +84,50 @@
     <br />
     <hr />
     <br />
-
-
-
-    <div class="panel panel-info">
+<div class="panel panel-info">
         <div class="panel-heading">
-            <h3 class="panel-title green">Custom Policies</h3>
+            <h3 class="panel-title green">Time</h3>
         </div>
         <div class="panel-body">
             <div class="row">
-                <label class="control-label col-sm-2"> Policy</label>
-                <div class="col-sm-5">
-                    <input type="text" placeholder="Text" class="form-control input-sm col-sm-10" />
+                <div class="col-sm-6">
+                    <label class="control-label col-sm-5"> Check-in Time</label>
+                    <div class="col-sm-5">
+                        <input type="text" placeholder="Text" class="form-control input-sm col-sm-10" />
+                    </div>
                 </div>
-                <div class="col-sm-5">
+                <div class="col-sm-6">
+                    <label class="control-label col-sm-5"> Check-out Time</label>
+                    <div class="col-sm-5">
+                        <input type="text" placeholder="Text" class="form-control input-sm col-sm-10" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--end panel-->
+
+
+<hr>
+<br>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title green">Additional Policies</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
                     <select class="form-control input-sm col-sm-10">
-                        <option>Select</option>
+                        <option>Select Type</option>
                     </select>
-                    <a class="btn btn-link">Add</a>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" placeholder="Name" class="form-control input-sm col-sm-10" />
+                </div>
+                <div class="col-md-4">
+                    <input type="text" placeholder="Details" class="form-control input-sm col-sm-10" />
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-link">Add</button>
                 </div>
             </div>
         </div>
@@ -137,7 +141,7 @@
         <div class="panel-body">
             <div class="form-inline">
 
-                <div class="col-sm-4 no-padding"> 
+                <div class="col-sm-3 no-padding"> 
                     <div class="form-group">
                         <label class="col-md-4 control-label">Title</label>
                         <div class="col-md-6">
@@ -145,23 +149,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3 no-padding">
+                <div class="col-sm-6 no-padding">
                     <div class="form-group">
-                        <label class="col-md-4 control-label">Type</label>
+                        <label class="col-md-4 control-label">Description</label>
                         <div class="col-md-6">
-                            <select class="form-control input-sm">
-                                <option>Select</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 no-padding">
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Visibility</label>
-                        <div class="col-md-6">
-                            <select class="form-control input-sm">
-                                <option>Select Visibility</option>
-                            </select>
+                            <textarea cols="35" rows="4" class="form-control input-sm"></textarea>
                         </div>
                     </div>
                 </div>
