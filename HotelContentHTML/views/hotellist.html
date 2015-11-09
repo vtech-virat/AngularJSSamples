@@ -27,7 +27,8 @@
                         <div class="dataTables_length">
                             <label>
                                 Display
-                                <select class="form-control input-sm">
+                                <select class="form-control input-sm" ng-model="PageSize">
+                                    <option value="5">5</option>
                                     <option value="10">10</option>
                                     <option value="25">25</option>
                                     <option value="50">50</option>
@@ -79,7 +80,7 @@
                             <td ng-bind="h.Id"></td>
                             <td ng-bind="h.Name"></td>
                             <td class="hidden-480" ng-bind="h.Address.Country"></td>
-                            <td ng-bind="h.LastUpdate">Feb 12</td>
+                            <td ng-bind="h.LastUpdate"></td>
                             <td class="hidden-480">
                                 <span class="label label-sm label-warning" ng-bind="h.status">Enable</span>
                             </td>
@@ -106,13 +107,13 @@
                         <div class="dataTables_paginate paging_simple_numbers">
                             <ul class="pagination">
                                 <li tabindex="0" class="paginate_button previous">
-                                    <a href="#">Previous</a>
+                                    <a ng-click="prevPage();">Previous</a>
                                 </li>
                                 <li tabindex="0" class="">
                                     <span> {{paginginfo.currentPage}} of {{paginginfo.totalPages}}</span>
                                 </li>
                                 <li id="dynamic-table_next" tabindex="0" class="paginate_button next">
-                                    <a href="#">Next</a>
+                                    <a ng-click="nextPage();">Next</a>
                                 </li>
                             </ul>
                         </div>

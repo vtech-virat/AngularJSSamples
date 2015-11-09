@@ -14,7 +14,7 @@ hotelcontentApp.config(function($routeProvider) {
       when("/newhotelstep2",
       {
           templateUrl:"views/step2.html",
-          controller:"hoteldetailscontrollerstep2"
+          controller:"hoteldetailscontroller2"
       })
       .otherwise({
         redirectTo: "/hotellist"
